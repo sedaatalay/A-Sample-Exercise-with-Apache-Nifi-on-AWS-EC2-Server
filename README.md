@@ -98,6 +98,7 @@ mkdir odev
 ##### Configure processor
 <img width="789" alt="Ekran Resmi 2022-03-12 19 08 11" src="https://user-images.githubusercontent.com/91700155/158028740-7ec0fe64-7a88-41a4-bcc8-173caa782340.png">
 <img width="789" alt="Ekran Resmi 2022-03-12 19 08 03" src="https://user-images.githubusercontent.com/91700155/158028749-71eaf25d-6bb0-4cee-ac8c-7ae1ab422460.png">
+
 ##### Sample json file : "https://geoserver.nottinghamcity.gov.uk/opendata/geojson/ncc_Recycling_Centres.json"  
 <img width="789" alt="Ekran Resmi 2022-03-12 19 07 16" src="https://user-images.githubusercontent.com/91700155/158028759-13760653-bd51-496f-8c97-729fa2083c15.png">
 
