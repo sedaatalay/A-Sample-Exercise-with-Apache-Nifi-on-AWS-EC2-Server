@@ -98,7 +98,6 @@ mkdir odev
 ##### Configure processor
 <img width="789" alt="Ekran Resmi 2022-03-12 19 08 11" src="https://user-images.githubusercontent.com/91700155/158028740-7ec0fe64-7a88-41a4-bcc8-173caa782340.png">
 <img width="789" alt="Ekran Resmi 2022-03-12 19 08 03" src="https://user-images.githubusercontent.com/91700155/158028749-71eaf25d-6bb0-4cee-ac8c-7ae1ab422460.png">
-
 ##### Sample json file : "https://geoserver.nottinghamcity.gov.uk/opendata/geojson/ncc_Recycling_Centres.json"  
 <img width="789" alt="Ekran Resmi 2022-03-12 19 07 16" src="https://user-images.githubusercontent.com/91700155/158028759-13760653-bd51-496f-8c97-729fa2083c15.png">
 
@@ -106,17 +105,14 @@ mkdir odev
 <img width="698" alt="Ekran Resmi 2022-03-12 19 16 53" src="https://user-images.githubusercontent.com/91700155/158029064-d077001a-47da-49d4-86ea-bb5e9a8f3dca.png">
  
 #### Connect between the "InvokeHTTP" and "UpdateAttribute"
-<img width="698" alt="Ekran Resmi 2022-03-12 19 16 53" src="https://user-images.githubusercontent.com/91700155/158029188-c80fca24-5eca-4de7-be26-0f719d2c00a0.png">
 <img width="764" alt="Ekran Resmi 2022-03-12 19 19 08" src="https://user-images.githubusercontent.com/91700155/158029448-047fcb00-05c5-474c-a5b1-df7cc740bc2f.png">
 <img width="347" alt="Ekran Resmi 2022-03-12 19 19 27" src="https://user-images.githubusercontent.com/91700155/158029220-383585de-1d4f-4425-bcfa-99f3e99cfcf6.png">
 
 ### 3- Convert Json file to CSV file using ConvertRecord Processor
 #### Choose the "ConvertRecord" from the Processor Panel
 <img width="803" alt="Ekran Resmi 2022-03-12 19 19 54" src="https://user-images.githubusercontent.com/91700155/158029304-85834b9c-3e27-4c5b-aef8-39310b8f52df.png">
-##### Configure processor
-<img width="768" alt="Ekran Resmi 2022-03-12 19 20 19" src="https://user-images.githubusercontent.com/91700155/158029475-6b0ffa0a-3753-4dd0-9410-c8f8d2478efd.png">
-<img width="347" alt="Ekran Resmi 2022-03-12 19 20 33" src="https://user-images.githubusercontent.com/91700155/158029486-e59d3c42-32ce-4acf-b73b-2169296e7edb.png">
-#### Set your directory
+#### Configure processor
+##### Set your directory
 <img width="792" alt="Ekran Resmi 2022-03-12 19 35 38" src="https://user-images.githubusercontent.com/91700155/158030051-c9c043da-f63d-48d6-ad20-7cc5a4d18aaa.png">
 ##### Add the "Record Reader"
  <img width="833" alt="Ekran Resmi 2022-03-12 19 29 17" src="https://user-images.githubusercontent.com/91700155/158030286-b2c72d92-9642-44be-99ac-2222cfd7f887.png">
@@ -124,12 +120,16 @@ mkdir odev
 <img width="833" alt="Ekran Resmi 2022-03-12 19 30 20" src="https://user-images.githubusercontent.com/91700155/158030140-a7b4b6d8-da94-41ef-b0d6-63b791bfb0bd.png">
 ##### Make sure the state is "Enabled"
 <img width="1374" alt="Ekran Resmi 2022-03-12 19 31 35" src="https://user-images.githubusercontent.com/91700155/158030203-0f3b6085-b58d-452d-b2be-a14b2717be22.png">
+ 
+#### Connect between the "UpdateAttribute" and "ConvertRecord" 
+<img width="768" alt="Ekran Resmi 2022-03-12 19 20 19" src="https://user-images.githubusercontent.com/91700155/158029475-6b0ffa0a-3753-4dd0-9410-c8f8d2478efd.png">
+<img width="347" alt="Ekran Resmi 2022-03-12 19 20 33" src="https://user-images.githubusercontent.com/91700155/158029486-e59d3c42-32ce-4acf-b73b-2169296e7edb.png"> 
+ 
 #### For the "ConvertRecord", add "Funnel" section from tab 
 <img width="653" alt="Ekran Resmi 2022-03-12 19 34 33" src="https://user-images.githubusercontent.com/91700155/158031044-4e8f8268-3a0e-4dff-825c-c88ac26e3831.png">
-<img width="667" alt="Ekran Resmi 2022-03-12 19 34 59 kopyası" src="https://user-images.githubusercontent.com/91700155/158030393-2199d6f2-4436-4eb9-899e-abb86b146223.png">
 #### "Failure" button can be selected in the connection 
 <img width="760" alt="Ekran Resmi 2022-03-12 19 34 45" src="https://user-images.githubusercontent.com/91700155/158030411-5cd84db5-0316-4073-9970-4f617f9ee18b.png">
-
+<img width="667" alt="Ekran Resmi 2022-03-12 19 34 59 kopyası" src="https://user-images.githubusercontent.com/91700155/158030393-2199d6f2-4436-4eb9-899e-abb86b146223.png">
   
   
 ### 4- : Put the flowfile into a directory. (you can use nifi-outputs directory or create a directory for yourself)
@@ -140,11 +140,13 @@ mkdir odev
 <img width="792" alt="Ekran Resmi 2022-03-12 19 35 48" src="https://user-images.githubusercontent.com/91700155/158029995-2c3ba0ab-131b-480d-9f7b-e8c15d32e002.png">
 
 
-#### Connect between the "ConvertRecord" and "PutFile"
-<img width="1080" alt="Ekran Resmi 2022-03-12 19 34 59" src="https://user-images.githubusercontent.com/91700155/158030430-9f7fbed9-6eb1-45a9-bf0a-5af20aaec88a.png">
-#### "Success" button can be selected in the connection 
+#### Connect between the "ConvertRecord" and "PutFile". "Success" button can be selected in the connection.
 <img width="763" alt="Ekran Resmi 2022-03-12 19 25 14" src="https://user-images.githubusercontent.com/91700155/158029631-7dabe9d9-6b68-4557-8df9-569d27ba17e8.png">
+<img width="1080" alt="Ekran Resmi 2022-03-12 19 34 59" src="https://user-images.githubusercontent.com/91700155/158030430-9f7fbed9-6eb1-45a9-bf0a-5af20aaec88a.png">
 
+ 
+ 
+ 
 #### For the "PutFile", add "Funnel" section from tab 
 <img width="706" alt="Ekran Resmi 2022-03-12 19 26 16" src="https://user-images.githubusercontent.com/91700155/158029728-390beb51-7419-4fa4-8511-f6b12830367b.png">
 #### Connect between the "PutFile" and "Funnel"
