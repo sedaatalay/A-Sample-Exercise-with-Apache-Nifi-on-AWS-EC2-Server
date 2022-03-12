@@ -56,7 +56,7 @@ nano conf/nifi.properties
 ```
 <img width="887" alt="Ekran Resmi 2022-03-12 16 59 40" src="https://user-images.githubusercontent.com/91700155/158028006-bac4edd9-a704-4838-bdb6-1a47bda35a32.png">
 
-#### Delete the "http.host" value
+#### Delete the "nifi.web.http.host" value
 ```console
 cd nifi-1.13.2/
 nano conf/nifi.properties
@@ -92,20 +92,18 @@ mkdir odev
 <img width="521" alt="Ekran Resmi 2022-03-12 19 03 23" src="https://user-images.githubusercontent.com/91700155/158028446-39681dc5-79f1-4366-a344-8a194b8242f6.png">
   
 #### Choose the "InvokeHTTP" from the Processor Panel
-#### Configure the "InvokeHTTP"
 <img width="796" alt="Ekran Resmi 2022-03-12 19 09 13" src="https://user-images.githubusercontent.com/91700155/158028617-dc1eecd3-f838-4b3e-bef8-eadfb4334cad.png">
 <img width="925" alt="Ekran Resmi 2022-03-12 19 04 34" src="https://user-images.githubusercontent.com/91700155/158028619-8a277a86-8788-4fe5-8cc3-f7fe5be59232.png">
-  
+ 
+##### Configure processor
+<img width="789" alt="Ekran Resmi 2022-03-12 19 08 11" src="https://user-images.githubusercontent.com/91700155/158028740-7ec0fe64-7a88-41a4-bcc8-173caa782340.png">
+<img width="789" alt="Ekran Resmi 2022-03-12 19 08 03" src="https://user-images.githubusercontent.com/91700155/158028749-71eaf25d-6bb0-4cee-ac8c-7ae1ab422460.png">
 ##### Sample json file : "https://geoserver.nottinghamcity.gov.uk/opendata/geojson/ncc_Recycling_Centres.json"  
 <img width="789" alt="Ekran Resmi 2022-03-12 19 07 16" src="https://user-images.githubusercontent.com/91700155/158028759-13760653-bd51-496f-8c97-729fa2083c15.png">
 
 #### Choose the "UpdateAttribute" from the Processor Panel
 <img width="698" alt="Ekran Resmi 2022-03-12 19 16 53" src="https://user-images.githubusercontent.com/91700155/158029064-d077001a-47da-49d4-86ea-bb5e9a8f3dca.png">
-  
-##### Configure processor
-<img width="789" alt="Ekran Resmi 2022-03-12 19 08 11" src="https://user-images.githubusercontent.com/91700155/158028740-7ec0fe64-7a88-41a4-bcc8-173caa782340.png">
-<img width="789" alt="Ekran Resmi 2022-03-12 19 08 03" src="https://user-images.githubusercontent.com/91700155/158028749-71eaf25d-6bb0-4cee-ac8c-7ae1ab422460.png">
-
+ 
 #### Connect between the "InvokeHTTP" and "UpdateAttribute"
 <img width="698" alt="Ekran Resmi 2022-03-12 19 16 53" src="https://user-images.githubusercontent.com/91700155/158029188-c80fca24-5eca-4de7-be26-0f719d2c00a0.png">
 <img width="764" alt="Ekran Resmi 2022-03-12 19 19 08" src="https://user-images.githubusercontent.com/91700155/158029448-047fcb00-05c5-474c-a5b1-df7cc740bc2f.png">
