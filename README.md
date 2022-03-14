@@ -88,6 +88,7 @@ mkdir odev
 
 
 ### 2- Get the file from HTTP endpoint (which we used in the Nifi lecture) 
+ 
 #### Select a processor from the tab  
 <img width="521" alt="Ekran Resmi 2022-03-12 19 03 23" src="https://user-images.githubusercontent.com/91700155/158028446-39681dc5-79f1-4366-a344-8a194b8242f6.png">
   
@@ -110,6 +111,7 @@ mkdir odev
 <img width="347" alt="Ekran Resmi 2022-03-12 19 19 27" src="https://user-images.githubusercontent.com/91700155/158029220-383585de-1d4f-4425-bcfa-99f3e99cfcf6.png">
 
 ### 3- Convert Json file to CSV file using ConvertRecord Processor
+ 
 #### Choose the "ConvertRecord" from the Processor Panel
 <img width="803" alt="Ekran Resmi 2022-03-12 19 19 54" src="https://user-images.githubusercontent.com/91700155/158029304-85834b9c-3e27-4c5b-aef8-39310b8f52df.png">
  
@@ -140,6 +142,7 @@ mkdir odev
   
   
 ### 4- : Put the flowfile into a directory. (you can use nifi-outputs directory or create a directory for yourself)
+ 
 #### Choose the "PutFile" from the Processor Panel
 <img width="796" alt="Ekran Resmi 2022-03-12 19 21 08" src="https://user-images.githubusercontent.com/91700155/158029560-575f79b6-e446-4021-951a-da70ae207926.png">
  
@@ -151,16 +154,16 @@ mkdir odev
 #### Connect between the "ConvertRecord" and "PutFile". "Success" button can be selected in the connection.
 <img width="763" alt="Ekran Resmi 2022-03-12 19 25 14" src="https://user-images.githubusercontent.com/91700155/158029631-7dabe9d9-6b68-4557-8df9-569d27ba17e8.png">
 <img width="1080" alt="Ekran Resmi 2022-03-12 19 34 59" src="https://user-images.githubusercontent.com/91700155/158030430-9f7fbed9-6eb1-45a9-bf0a-5af20aaec88a.png">
-
- 
- 
  
 #### For the "PutFile", add "Funnel" section from tab 
 <img width="706" alt="Ekran Resmi 2022-03-12 19 26 16" src="https://user-images.githubusercontent.com/91700155/158029728-390beb51-7419-4fa4-8511-f6b12830367b.png">
+ 
 #### Connect between the "PutFile" and "Funnel"
 <img width="565" alt="Ekran Resmi 2022-03-12 19 38 15" src="https://user-images.githubusercontent.com/91700155/158030498-57e24dae-9273-4217-8b1d-c3c637676ab0.png">
+ 
 #### Configure between the "PutFile" and "Funnel". "Success" button can be selected in the connection 
 <img width="758" alt="Ekran Resmi 2022-03-12 19 38 30" src="https://user-images.githubusercontent.com/91700155/158030516-a0ee2423-cdd1-4938-819e-2cc215d8f953.png">
+ 
 ### The queue is below: 
 <img width="1384" alt="Ekran Resmi 2022-03-12 19 39 15" src="https://user-images.githubusercontent.com/91700155/158030755-a6bb23a8-6f33-40d5-8315-b0b7a83603e1.png">
    
