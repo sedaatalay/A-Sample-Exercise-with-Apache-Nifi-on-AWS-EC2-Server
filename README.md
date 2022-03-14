@@ -98,6 +98,7 @@ mkdir odev
 ##### Configure processor
 <img width="789" alt="Ekran Resmi 2022-03-12 19 08 11" src="https://user-images.githubusercontent.com/91700155/158028740-7ec0fe64-7a88-41a4-bcc8-173caa782340.png">
 <img width="789" alt="Ekran Resmi 2022-03-12 19 08 03" src="https://user-images.githubusercontent.com/91700155/158028749-71eaf25d-6bb0-4cee-ac8c-7ae1ab422460.png">
+ 
 ##### Sample json file : "https://geoserver.nottinghamcity.gov.uk/opendata/geojson/ncc_Recycling_Centres.json"  
 <img width="789" alt="Ekran Resmi 2022-03-12 19 07 16" src="https://user-images.githubusercontent.com/91700155/158028759-13760653-bd51-496f-8c97-729fa2083c15.png">
 
@@ -111,13 +112,18 @@ mkdir odev
 ### 3- Convert Json file to CSV file using ConvertRecord Processor
 #### Choose the "ConvertRecord" from the Processor Panel
 <img width="803" alt="Ekran Resmi 2022-03-12 19 19 54" src="https://user-images.githubusercontent.com/91700155/158029304-85834b9c-3e27-4c5b-aef8-39310b8f52df.png">
+ 
 #### Configure processor
+ 
 ##### Set your directory
 <img width="792" alt="Ekran Resmi 2022-03-12 19 35 38" src="https://user-images.githubusercontent.com/91700155/158030051-c9c043da-f63d-48d6-ad20-7cc5a4d18aaa.png">
+ 
 ##### Add the "Record Reader"
  <img width="833" alt="Ekran Resmi 2022-03-12 19 29 17" src="https://user-images.githubusercontent.com/91700155/158030286-b2c72d92-9642-44be-99ac-2222cfd7f887.png">
+ 
 ##### Add the "Record Writer"
 <img width="833" alt="Ekran Resmi 2022-03-12 19 30 20" src="https://user-images.githubusercontent.com/91700155/158030140-a7b4b6d8-da94-41ef-b0d6-63b791bfb0bd.png">
+ 
 ##### Make sure the state is "Enabled"
 <img width="1374" alt="Ekran Resmi 2022-03-12 19 31 35" src="https://user-images.githubusercontent.com/91700155/158030203-0f3b6085-b58d-452d-b2be-a14b2717be22.png">
  
@@ -127,6 +133,7 @@ mkdir odev
  
 #### For the "ConvertRecord", add "Funnel" section from tab 
 <img width="653" alt="Ekran Resmi 2022-03-12 19 34 33" src="https://user-images.githubusercontent.com/91700155/158031044-4e8f8268-3a0e-4dff-825c-c88ac26e3831.png">
+ 
 #### "Failure" button can be selected in the connection 
 <img width="760" alt="Ekran Resmi 2022-03-12 19 34 45" src="https://user-images.githubusercontent.com/91700155/158030411-5cd84db5-0316-4073-9970-4f617f9ee18b.png">
 <img width="667" alt="Ekran Resmi 2022-03-12 19 34 59 kopyası" src="https://user-images.githubusercontent.com/91700155/158030393-2199d6f2-4436-4eb9-899e-abb86b146223.png">
@@ -135,6 +142,7 @@ mkdir odev
 ### 4- : Put the flowfile into a directory. (you can use nifi-outputs directory or create a directory for yourself)
 #### Choose the "PutFile" from the Processor Panel
 <img width="796" alt="Ekran Resmi 2022-03-12 19 21 08" src="https://user-images.githubusercontent.com/91700155/158029560-575f79b6-e446-4021-951a-da70ae207926.png">
+ 
 #### Configure processor
 <img width="790" alt="Ekran Resmi 2022-03-12 19 38 59" src="https://user-images.githubusercontent.com/91700155/158030553-7dabf336-b365-43b4-b4e3-dbacc3949bdf.png">
 <img width="792" alt="Ekran Resmi 2022-03-12 19 35 48" src="https://user-images.githubusercontent.com/91700155/158029995-2c3ba0ab-131b-480d-9f7b-e8c15d32e002.png">
@@ -158,16 +166,21 @@ mkdir odev
    
 
 ### 5- : Use GetFile processor and read the csv file which you put into a directory.
+ 
 #### Choose the "GetFile" from the Processor Panel
 <img width="798" alt="Ekran Resmi 2022-03-12 19 39 46" src="https://user-images.githubusercontent.com/91700155/158030612-e9e7bb20-7d2d-4fe9-a606-418bee14cf1f.png">
+ 
 #### Configure processor
 <img width="792" alt="Ekran Resmi 2022-03-12 19 41 14" src="https://user-images.githubusercontent.com/91700155/158030804-352d9c82-c520-4947-ab4c-7dc42e657e73.png">
+ 
 #### Configure between the "PutFile" and "Funnel". "Success" button can be selected in the connection 
 <img width="320" alt="Ekran Resmi 2022-03-12 19 40 15" src="https://user-images.githubusercontent.com/91700155/158030622-55562479-54ae-4451-af19-2bb2b69264ac.png">
 <img width="798" alt="Ekran Resmi 2022-03-12 19 40 20" src="https://user-images.githubusercontent.com/91700155/158030672-57adb47a-fdc1-4ac7-a6f5-9c2b51c58e6b.png">
 <img width="560" alt="Ekran Resmi 2022-03-12 19 44 54" src="https://user-images.githubusercontent.com/91700155/158030659-392995df-3da5-4c24-b52c-9b706dde0b7b.png">
+ 
 ### The last queue is below:   
 <img width="1440" alt="Ekran Resmi 2022-03-12 19 43 32" src="https://user-images.githubusercontent.com/91700155/158030818-af25d60a-94b8-426e-b841-4a68054792a5.png">
+ 
 ### Now we can check from the terminal
 <img width="885" alt="Ekran Resmi 2022-03-12 19 44 20" src="https://user-images.githubusercontent.com/91700155/158030910-6f9b5f5e-7081-4c65-8d51-e16ef6e1e539.png">
 
