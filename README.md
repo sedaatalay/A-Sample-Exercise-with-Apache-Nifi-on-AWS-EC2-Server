@@ -37,7 +37,7 @@ ssh -i <pem file name> ubuntu@public-dns-name
 ```console
 sudo apt update
 sudo apt upgrade
-sudo apt install openjdk-11-jdk
+sudo apt install openjdk-11-jdk-headless
 ```
 ### 12- Installing Apache Nifi from the web site https://archive.apache.org/dist/nifi/1.13.2/
 ```console
