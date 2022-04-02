@@ -71,6 +71,7 @@ bin/nifi.sh status
 <img width="874" alt="Ekran Resmi 2022-03-12 17 06 46" src="https://user-images.githubusercontent.com/91700155/158028133-38226dca-bad7-4e3a-bb96-1d03e2157c1a.png">
 
 #### Nifi Web UI
+##### After waiting about 5-10 seconds, the Nifi Web UI will open.
 ```console
 http://<yourpublicdns>:8080/
 ```
